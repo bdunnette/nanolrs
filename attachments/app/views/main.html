@@ -17,9 +17,11 @@
 </div>
 
 <div class="row marketing">
-  <ul>
-    <li ng-repeat="row in db.rows">{{row}}</li>
-  </ul>
+  <div ng-repeat="row in db.rows">
+    <ul>
+      <li ng-repeat="(key, value) in row">{{key}}:{{value}}</li>
+    </ul>
+  </div>
 </div>
 
 <div class="footer">
