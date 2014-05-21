@@ -31,7 +31,7 @@ ddoc.views.peopleByName = {
 
 ddoc.views.statements = {
   map: function(doc) {
-    if(doc.actor && doc.verb && doc.object) {
+    if(doc.type == 'statement') {
       emit(doc._id, doc);
     }
   }
